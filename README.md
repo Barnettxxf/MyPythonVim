@@ -1,2 +1,4 @@
 # MyPythonVim
-Vim config for Python
+Created for crontab task
+dailych branch is for routine backups of ~/.vimrc
+There are some experience for vim configuture in ForVIM.txt. 
