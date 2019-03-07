@@ -99,7 +99,7 @@ Python的Vim开发环境终于OK了，写篇总结纪念一下！
 	e.临时添加python3-dev的路径，执行$ export CPLUS_INCLUDE_PATH=/usr/include/python3.6m
 	f.更新libgcc，anaconda自带的版本不是最新的,执行$ conda install libgcc
 	g.最后一步, $ cmake --build . --target ycm_core
-	
+	h.找到`ycm_extra_conf.py`文件，复制到`.vim/`中，在`PythonSysPath`函数中添加代码`sys_path.append("/path/to/third_part/packages")`,才可以自动补全第三方库
 	ps:我在import numpy时候不会有numpy提示，但import后numpy相关库的补全是有的。
 
 
