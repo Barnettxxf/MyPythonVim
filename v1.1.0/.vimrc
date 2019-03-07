@@ -22,6 +22,7 @@ Bundle 'jiangmiao/auto-pairs'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'klen/python-mode'
+Bundle 'scrooloose/nerdtree'
 
 call vundle#end()
 
@@ -154,3 +155,25 @@ let g:pymode_trim_whitespaces=1
 let g:pymode_options=1
 let g:pymode_options_max_line_length=120
 " Python-Mode Config ----------------
+
+" Nerdtree Config -------------------
+" open a NERDTree automatically when vim starts up
+autocmd vimenter * NERDTree
+"open a NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"open NERDTree automatically when vim starts up on opening a directory
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+"map F2 to open NERDTree
+map <F2> :NERDTreeToggle<CR>
+"close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:NERDTreeChDirMode = 2
+let NERDTreeWinSize = 30
+let NERDTreeCHristamsTree=1
+" "设置Bookmark文件路径和显示
+let NERDTreeBookmarksFile=$VIM.'\Data\NerdBookmarks.txt'
+let NERDTreeShowBookmarks=1"
+" Nerdtree Config -------------------
+
