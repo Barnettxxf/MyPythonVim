@@ -62,7 +62,7 @@ Python的Vim开发环境终于OK了，写篇总结纪念一下！
 *这些细节都是从以上提及的文章中结合自己情况整理出来的*	
 1.vundle下载和基本配置
 	**下载**
-	$ git clone https://github/gmarik/vundle.git ~/.vim/bundle/vundle
+	$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 	**配置框架
 	"begin------------------------
 	set nocompatible
