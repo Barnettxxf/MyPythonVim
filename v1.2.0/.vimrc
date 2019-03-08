@@ -178,6 +178,7 @@ let NERDTreeCHristamsTree=1
 " "设置Bookmark文件路径和显示
 let NERDTreeBookmarksFile=$VIM.'\Data\NerdBookmarks.txt'
 let NERDTreeShowBookmarks=1"
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 " Nerdtree Config -------------------
 
 " Taglist Config --------------------
