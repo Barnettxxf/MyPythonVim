@@ -9,7 +9,7 @@ Python的Vim开发环境终于OK了，写篇总结纪念一下！
 5. 标签页的配置要补充到~/.vimrc里面
 
 ### 使用v1.2.0快速体验
-	*v1.2.0含代码提示（主要是配置python，其他语言也会自动补全，但是效果不太好）,python开发模式,代码检查，文件目录，底部状态栏等*
+	v1.2.0含代码提示（主要是配置python，其他语言也会自动补全，但是效果不太好）,python开发模式,代码检查，文件目录，底部状态栏等
 	![vim-impression-drawing](./img/vim-impression-drawing.png)
 1. 安装vim-gnome(gnome版的vim，可以跳过这步)
 	`sudo apt-get install vim-gnome`
