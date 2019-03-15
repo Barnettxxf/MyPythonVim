@@ -1,3 +1,4 @@
+## Vim(github显示有点乱，请直接打开文件阅读...)
 Python的Vim开发环境终于OK了，写篇总结纪念一下！
 
 *为了避免忘记还需要做的事情，先在前面写上以备忘*
@@ -8,7 +9,7 @@ Python的Vim开发环境终于OK了，写篇总结纪念一下！
 5.标签页的配置要补充到~/.vimrc里面
 
 
-###Vim的python环境配置大概流程
+### Vim的python环境配置大概流程
 1.个人习惯配置，例如显示行号，设置退出Insert Mode的对应按键修改等等。我是先学VimScript的，所以基本都用他的作者的习惯配置
 2.安装Vim的插件管理器Vundle及其配置
 3.根据网上推荐的Vim插件选择。初版确认的插件有以下：
@@ -58,11 +59,11 @@ Python的Vim开发环境终于OK了，写篇总结纪念一下！
 	vim-scripts/Pydiction			这个配置是复制的，回头看下
 	kevinw/pyflakes-vim			这个配置复制的，回头看下
 
-###各个插件配置细节
+### 各个插件配置细节
 *这些细节都是从以上提及的文章中结合自己情况整理出来的*	
 1.vundle下载和基本配置
 	**下载**
-	$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+	$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	**配置框架
 	"begin------------------------
 	set nocompatible
@@ -90,7 +91,7 @@ Python的Vim开发环境终于OK了，写篇总结纪念一下！
 	:set tags=tags
 3.YouCompleteMe（这个配置起来真的麻烦...)
 *links:http://www.cnblogs.com/algorithmchangeworld/p/7393156.html*
-	**环境要求:**系统安装了Clang，python3-dev，cmake，anaconda
+	**环境要求:**系统安装了Clang，python3-dev，cmake，anaconda(18年上半年的版本)
 	a.想用vundle把YCM装了
 	b.在~/.vim/bundle/YouCompleteMe/目录下，运行$ python3 install.py
 	c.完成上述步骤会多一个third_party目录的，进入到其ycmd/cpp/目录下
@@ -99,12 +100,13 @@ Python的Vim开发环境终于OK了，写篇总结纪念一下！
 	e.临时添加python3-dev的路径，执行$ export CPLUS_INCLUDE_PATH=/usr/include/python3.6m
 	f.更新libgcc，anaconda自带的版本不是最新的,执行$ conda install libgcc
 	g.最后一步, $ cmake --build . --target ycm_core
-	h.找到`ycm_extra_conf.py`文件，复制到`.vim/`中，在`PythonSysPath`函数中添加代码`sys_path.append("/path/to/third_part/packages")`,才可以自动补全第三方库
+	h.找到`YouCompleteMe/.ycm_extra_conf.py`文件，复制到`.vim/`中，在`PythonSysPath`函数中添加代码`sys_path.append("/path/to/third_part/packages")`,才可以自动补全第三方库(本仓库有，可以参考)
 	ps:我在import numpy时候不会有numpy提示，但import后numpy相关库的补全是有的。
 
 
 
 4.其他插件比较好配置，参考我的.vimrc注释即可
+
 
 
 补充：搜索的时候发现了个好东西，该作者分享了写的一个脚本在Linux可以自动配置好python的开发环境的vim，一些配置也是参考他的，链接：http://python.jobbole.com/84166/
