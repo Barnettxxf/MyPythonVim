@@ -8,6 +8,16 @@ Python的Vim开发环境终于OK了，写篇总结纪念一下！
 4. Markdown的用法，学习下
 5. 标签页的配置要补充到~/.vimrc里面
 
+### 使用v1.2.0快速体验
+	*v1.2.0含代码提示（主要是配置python，其他语言也会自动补全，但是效果不太好）,python开发模式,代码检查，文件目录，底部状态栏等*
+	![vim-impression-drawing](./img/vim-impression-drawing.png)
+1. 安装vim-gnome(gnome版的vim，可以跳过这步)
+	`sudo apt-get install vim-gnome`
+2. 将本仓库代码clone下来
+	`git clone https://github.com/Barnettxxf/MyPythonVim.git`
+3. 将v1.2.0的`.vimrc`放在对应账户的目录下
+	`cp v1.2.0/.vimrc ~`
+4. 按照“Vim的python环境配置大概流程”中提到的安装vundle和YouCompleteMe的配置方法操作即可
 
 ### Vim的python环境配置大概流程
 1. 个人习惯配置，例如显示行号，设置退出Insert Mode的对应按键修改等等。我是先学VimScript的，所以基本都用他的作者的习惯配置
