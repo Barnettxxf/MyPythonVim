@@ -5,6 +5,9 @@ set lines=35 columns=118
 set guifont=Consolas\ New:h14
 let mapleader=','
 let maplocalleader='\'
+set tabstop=4
+set softtabstop=4
+
 
 
 " Vundle Config --------------------
