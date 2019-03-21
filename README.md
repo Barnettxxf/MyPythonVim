@@ -17,7 +17,7 @@ v1.2.0含代码提示（主要是配置python，其他语言也会自动补全�
 	`git clone https://github.com/Barnettxxf/MyPythonVim.git`
 3. 将v1.2.0的`.vimrc`放在对应账户的目录下
 	`cp v1.2.0/.vimrc ~`
-4. 按照“Vim的python环境配置大概流程”中提到的安装vundle和YouCompleteMe的配置方法操作即可
+4. 按照“各个插件配置细节”中提到的安装vundle和YouCompleteMe的配置方法操作即可
 
 ### Vim的python环境配置大概流程
 1. 个人习惯配置，例如显示行号，设置退出Insert Mode的对应按键修改等等。我是先学VimScript的，所以基本都用他的作者的习惯配置
